@@ -1,0 +1,141 @@
+
+/* ---------- Header ---------- */
+.top-bar {
+  background: var(--dark-green);
+  color: white;
+  font-size: 0.85rem;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: block flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.main-nav.scrolled {
+  background: white;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 75px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  padding: 12px 22px;
+}
+
+/* ---------- Page Hero ---------- */
+.page-hero {
+  background: linear-gradient(135deg, var(--dark-green), var(--secondary-green));
+  color: white;
+  text-align: center;
+  padding: 96px 24px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 12px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #0f2d22;
+  color: #ccc;
+  padding: 72px 24px 32px;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 48px;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+}
+
+.footer-logo {
+  width: 175px;
+  margin-bottom: 16px;
+}
+
+footer h4 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+footer a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s;
+}
+
+.socials a:hover {
+  background: var(--gold);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+
+/* ---------- Responsive Nav ---------- */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+}

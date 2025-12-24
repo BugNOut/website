@@ -1,0 +1,307 @@
+:root {
+  --dark-green: #1B4332;
+  --secondary-green: #2D5A45;
+  --gold: #D4A373;
+  --sand: #E9D8A6;
+  --dark-gray: #2D3436;
+  --medium-gray: #636E72;
+  --light-gray: #F7F7F7;
+  --white: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  --container: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--light-gray);
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.btn.primary:hover {
+  background: #c18f5f;
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  border: 2px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn.outline:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+/* ---------- Layout ---------- */
+.section {
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 24px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Stats ---------- */
+.stats {
+  background: var(--dark-green);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 32px;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 3rem;
+  color: var(--gold);
+  display: block;
+}
+
+/* ---------- Grid ---------- */
+.grid {
+  display: grid;
+  gap: 32px;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.12);
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  background: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 96px 24px;
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  background: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+}
+
+/* ---------- 404 ---------- */
+.page-404 {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 48px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 64px 20px;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  appearance: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "▾";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.1rem;
+  color: var(--dark-green);
+}
+
+.custom-select select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
