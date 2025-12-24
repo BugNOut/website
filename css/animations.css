@@ -1,0 +1,30 @@
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Optional variations */
+[data-animate="fade-left"] {
+  transform: translateX(-24px);
+}
+
+[data-animate="fade-right"] {
+  transform: translateX(24px);
+}
+
+[data-animate="fade-left"].animate-in,
+[data-animate="fade-right"].animate-in {
+  transform: translateX(0);
+}
+
+/* Scroll indicator pulse */
+@keyframes pulse {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(10px); opacity: 1; }
+}

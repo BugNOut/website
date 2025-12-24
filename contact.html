@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Bug N' Out Pest Control</title>
+  <meta name="description" content="Contact Bug N' Out Pest Control for residential and commercial pest control services. Free inspections available across Central Texas.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Bug N' Out Pest Control">
+  <meta property="og:description" content="Request pest control services or a free inspection from Bug N' Out.">
+  <meta property="og:type" content="website">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/contact-form.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header Injection -->
+  <div id="header-container"></div>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Bug N’ Out</h1>
+        <p>Have a pest problem? Reach out today for fast, professional service.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <!-- Contact Form -->
+          <div class="contact-form card" data-animate>
+            <h2>Request Service</h2>
+            <p>Fill out the form below and our team will contact you shortly.</p>
+
+            <form id="contact-form">
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+              >
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              >
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+              >
+
+              <div class="custom-select">
+                <select name="service" required>
+                  <option value="">Select Service Needed</option>
+                  <option value="general">General Pest Control</option>
+                  <option value="termite">Termite Treatment</option>
+                  <option value="rodent">Rodent Control</option>
+                  <option value="wildlife">Wildlife Removal</option>
+                  <option value="commercial">Commercial Services</option>
+                </select>
+              </div>
+
+              <textarea
+                name="message"
+                placeholder="Tell us about your pest issue..."
+                rows="5"
+              ></textarea>
+
+              <button type="submit">
+                Request Service
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info" data-animate>
+
+            <div class="card">
+              <h3>Call Us</h3>
+              <p><strong>(304) 240-7748</strong></p>
+              <p>Mon–Fri, 8am–6pm</p>
+            </div>
+
+            <div class="card">
+              <h3>Email</h3>
+              <p><strong>marshall@bugnoutllc.com</strong></p>
+              <p>We usually reply within 24 hours</p>
+            </div>
+
+            <div class="card">
+              <h3>Service Area</h3>
+              <p><strong>Central Texas</strong></p>
+              <p>Residential & commercial coverage</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Teaser -->
+    <section class="section">
+      <div class="container" style="text-align:center;" data-animate>
+        <h2>Have More Questions?</h2>
+        <p>We make pest control simple and stress-free.</p>
+
+        <div style="margin-top:24px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <span class="btn outline">Quick Inspections</span>
+          <span class="btn outline">No Hidden Fees</span>
+          <span class="btn outline">Satisfaction Guaranteed</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Injection -->
+  <div id="footer-container"></div>
+
+</body>
+</html>
