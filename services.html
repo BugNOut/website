@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore Bug N' Out's professional pest control services." />
-  <title>Bug N' Out - Pest Control Services</title>
+  <meta name="description" content="Bug N' Out LLC offers comprehensive pest control services including general pest control, termite treatment, rodent control, commercial services, wildlife removal, and bed bug treatment." />
+  <meta name="keywords" content="pest control services, termite treatment, rodent control, wildlife removal, bed bug treatment, commercial pest control, Central PA" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pest Control Services | Bug N' Out LLC" />
+  <meta property="og:description" content="Complete pest control solutions for homes and businesses in Central Pennsylvania." />
+  <meta property="og:type" content="website" />
+
+  <title>Pest Control Services | Bug N' Out LLC</title>
 
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
 
   <script src="js/main.js" defer></script>
   <script src="js/animations.js" defer></script>
@@ -16,35 +21,143 @@
 <body>
   <div id="header-container"></div>
 
-  <main class="page">
+  <main>
+    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
-      <h1>Our Services</h1>
-      <p>Tailored pest control solutions for every situation.</p>
+      <h1 class="reveal">Our Services</h1>
+      <p class="reveal">Comprehensive pest control solutions tailored to your needs. Every service comes with a satisfaction guarantee.</p>
     </section>
 
+    <!-- ===== SERVICE DETAILS ===== -->
     <section class="section">
-      <div class="service-detail" data-animate="fade-left">
-        <h2>General Pest Control</h2>
-        <ul>
-          <li>Ants, roaches, spiders</li>
-          <li>Preventative treatments</li>
-          <li>Interior & exterior</li>
-          <li>Safe products</li>
-        </ul>
-      </div>
+      <div class="container">
+        <!-- General Pest Control -->
+        <div class="service-detail-grid" id="general">
+          <div class="service-detail-image reveal-left">🦟</div>
+          <div class="service-detail-content reveal-right">
+            <span class="badge">Service</span>
+            <h2>General Pest Control</h2>
+            <p>Our comprehensive general pest control service targets common household pests including ants, cockroaches, spiders, silverfish, earwigs, and more. We use a combination of interior treatments, exterior barrier sprays, and preventative measures to keep your home pest-free year-round.</p>
+            <p>All treatments use EPA-approved, pet-safe products. We offer flexible scheduling with quarterly, bi-monthly, or monthly service plans.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>Complete interior & exterior treatment</li>
+              <li>Preventative barrier protection</li>
+              <li>Safe for children & pets</li>
+              <li>Flexible maintenance plans</li>
+              <li>Emergency service available</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Schedule Service</a>
+          </div>
+        </div>
 
-      <div class="service-detail" data-animate="fade-right">
-        <h2>Termite Treatment</h2>
-        <ul>
-          <li>Inspections</li>
-          <li>Pre & post construction</li>
-          <li>Warranties</li>
-          <li>Repair letters</li>
-        </ul>
+        <!-- Termite Treatment -->
+        <div class="service-detail-grid reverse" id="termite">
+          <div class="service-detail-image reveal-right">🪵</div>
+          <div class="service-detail-content reveal-left">
+            <span class="badge">Service</span>
+            <h2>Termite Treatment</h2>
+            <p>Termites cause billions of dollars in property damage each year. Our termite specialists conduct thorough inspections using advanced detection equipment to identify infestations before they cause serious structural damage.</p>
+            <p>We offer both liquid soil treatments and baiting systems, with transferable warranties that add value to your property. Pre-construction treatments available for new builds.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>Comprehensive termite inspections</li>
+              <li>Liquid treatment & baiting systems</li>
+              <li>Pre-construction treatments</li>
+              <li>Transferable warranties</li>
+              <li>Repair letters for mortgage lenders</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Schedule Inspection</a>
+          </div>
+        </div>
+
+        <!-- Rodent Control -->
+        <div class="service-detail-grid" id="rodent">
+          <div class="service-detail-image reveal-left">🐀</div>
+          <div class="service-detail-content reveal-right">
+            <span class="badge">Service</span>
+            <h2>Rodent Control</h2>
+            <p>Rats and mice can cause significant damage to your property and pose serious health risks. Our rodent control program starts with a thorough inspection to identify entry points and nesting areas.</p>
+            <p>We use a combination of trapping, exclusion techniques, and sanitation recommendations to eliminate current infestations and prevent future ones. All work is guaranteed.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>Detailed inspection & assessment</li>
+              <li>Exclusion & entry point sealing</li>
+              <li>Trapping & removal</li>
+              <li>Sanitation guidance</li>
+              <li>Ongoing monitoring & maintenance</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Commercial Services -->
+        <div class="service-detail-grid reverse" id="commercial">
+          <div class="service-detail-image reveal-right">🏢</div>
+          <div class="service-detail-content reveal-left">
+            <span class="badge">Service</span>
+            <h2>Commercial Pest Control</h2>
+            <p>Your business reputation depends on a clean, pest-free environment. We provide customized pest management programs for businesses of all sizes, with flexible scheduling that minimizes disruption to your operations.</p>
+            <p>Our commercial clients receive detailed reporting, digital documentation for compliance, and priority service. We serve restaurants, office buildings, schools, healthcare facilities, and more.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>Customized treatment plans</li>
+              <li>Digital reporting & documentation</li>
+              <li>Compliance with health regulations</li>
+              <li>Discreet, after-hours service</li>
+              <li>Priority emergency response</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Commercial Quote</a>
+          </div>
+        </div>
+
+        <!-- Wildlife Removal -->
+        <div class="service-detail-grid" id="wildlife">
+          <div class="service-detail-image reveal-left">🦊</div>
+          <div class="service-detail-content reveal-right">
+            <span class="badge">Service</span>
+            <h2>Wildlife Removal</h2>
+            <p>Raccoons, squirrels, bats, birds, and other wildlife can become unwelcome house guests. Our humane wildlife removal services safely exclude animals from your property and prevent them from returning.</p>
+            <p>We handle everything from attic infestations to chimney animals, including damage repair and prevention. All wildlife is handled in accordance with state and federal regulations.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>Humane trapping & removal</li>
+              <li>Exclusion & prevention</li>
+              <li>Damage repair & restoration</li>
+              <li>Bat exclusion & guano cleanup</li>
+              <li>Licensed & insured</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Request Wildlife Help</a>
+          </div>
+        </div>
+
+        <!-- Bed Bug Treatment -->
+        <div class="service-detail-grid reverse" id="bedbug">
+          <div class="service-detail-image reveal-right">🛏️</div>
+          <div class="service-detail-content reveal-left">
+            <span class="badge">Service</span>
+            <h2>Bed Bug Treatment</h2>
+            <p>Bed bugs are one of the most challenging pests to eliminate. Our multi-approach treatment strategy combines heat treatments, chemical applications, and steam to ensure complete elimination.</p>
+            <p>We offer K9 inspection services for accurate detection, and all treatments include a follow-up visit to verify results. Our team works with you through every step of the process.</p>
+            <ul class="service-features" style="margin-bottom: var(--space-lg);">
+              <li>K9 detection inspections</li>
+              <li>Heat treatment available</li>
+              <li>Chemical & steam options</li>
+              <li>Pre-treatment preparation guidance</li>
+              <li>Follow-up verification included</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Schedule Inspection</a>
+          </div>
+        </div>
       </div>
-      <a class="btn primary" href="contact.html">Get a Quote</a>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <h2 class="reveal">Not Sure Which Service You Need?</h2>
+      <p class="reveal">Call us for a free consultation. We'll help you identify the problem and recommend the right solution.</p>
+      <div class="cta-actions reveal">
+        <a href="contact.html" class="btn btn-primary btn-lg">Free Consultation</a>
+        <a href="tel:3042407748" class="btn btn-secondary btn-lg">Call (304) 240-7748</a>
+      </div>
     </section>
   </main>
+
   <div id="footer-container"></div>
 </body>
 </html>
